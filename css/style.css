@@ -82,7 +82,7 @@ body {
   display: flex;
 }
 
-.hero {
+.header>.hero {
   width: 40%;
   margin-left: auto;
   padding-top: 4.5rem;
@@ -91,14 +91,14 @@ body {
   gap: 1rem;
 }
 
-.hero-small-title {
+.header>.hero>.hero-small-title {
   width: 100%;
   display: flex;
   justify-content: start;
   align-items: start;
 }
 
-.hero-small-title>.small-title {
+.header>.hero>.hero-small-title>.small-title {
   font-family: 'Roboto Serif';
   font-weight: 800;
   font-size: 1.5rem;
@@ -107,14 +107,14 @@ body {
   text-transform: uppercase;
 }
 
-.hero-big-title {
+.header>.hero>.hero-big-title {
   width: 100%;
   display: flex;
   justify-content: start;
   align-items: stretch;
 }
 
-.hero-big-title>.big-title {
+.header>.hero>.hero-big-title>.big-title {
   font-family: 'Roboto';
   font-weight: 900;
   font-size: 3rem;
@@ -122,21 +122,21 @@ body {
   color: #000;
 }
 
-.hero-text {
+.header>.hero>.hero-text {
   width: 100%;
   display: flex;
   justify-content: start;
   align-items: stretch;
 }
 
-.hero-text>.text {
+.header>.hero>.hero-text>.text {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 1rem;
   color: #000;
 }
 
-.hero-search-form {
+.header>.hero>.hero-search-form {
   width: 133%;
   height: 5rem;
   display: flex;
@@ -144,7 +144,7 @@ body {
   flex-wrap: nowrap;
 }
 
-.hero-search-field {
+.header>.hero>.hero-search-form>.hero-search-field {
   width: 75.5%;
   height: 100%;
   font-family: 'Roboto';
@@ -162,7 +162,7 @@ body {
   -o-border-radius: 10px 0 0 10px;
 }
 
-.hero-search-button {
+.header>.hero>.hero-search-form>.hero-search-button {
   width: 24.5%;
   height: 100%;
   font-family: 'Roboto';
@@ -181,7 +181,7 @@ body {
   -o-border-radius: 0 10px 10px 0;
 }
 
-.partners {
+.header>.hero>.partners {
   width: 131%;
   height: 5rem;
   display: flex;
@@ -191,24 +191,24 @@ body {
   margin-top: auto;
 }
 
-.partners-text {
+.header>.hero>.partners>.partners-text {
   font-family: 'Roboto';
   font-weight: 500;
   font-size: 1.125rem;
   color: #31353B;
 }
 
-.partners-logos {
+.header>.hero>.partners>.partners-logos {
   width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.partners-logos>.logo {
+.header>.hero>.partners>.partners-logos>.logo {
   height: 1.75rem;
 }
 
-.photo {
+.header>.photo {
   width: 50%;
   padding-top: 4.5rem;
   display: flex;
@@ -219,12 +219,12 @@ body {
   z-index: -1;
 }
 
-.photo>.image-box {
+.header>.photo>.image-box {
   width: 80%;
   height: 70%;
 }
 
-.photo>.image-box>.header-image {
+.header>.photo>.image-box>.header-image {
   width: 60%;
   height: 100%;
   box-shadow: 1rem 1rem 2rem 1px #555;
@@ -235,7 +235,7 @@ body {
   -o-border-radius: 10px;
 }
 
-.photo>.image-box>.first {
+.header>.photo>.image-box>.first {
   transform: translate(46%, -101%);
   -webkit-transform: translate(46%, -101%);
   -moz-transform: translate(46%, -101%);
@@ -243,7 +243,7 @@ body {
   -o-transform: translate(46%, -101%);
 }
 
-.photo>.image-box>.second {
+.header>.photo>.image-box>.second {
   transform: translate(0, 27%);
   -webkit-transform: translate(0, 27%);
   -moz-transform: translate(0, 27%);
@@ -251,7 +251,7 @@ body {
   -o-transform: translate(0, 27%);
 }
 
-.photo>.social-links {
+.header>.photo>.social-links {
   display: flex;
   flex-direction: column;
   margin-top: 25%;
@@ -259,7 +259,155 @@ body {
   gap: 1rem;
 }
 
-.photo>.social-links>.link {
+.header>.photo>.social-links>.link {
   cursor: pointer;
 }
 
+
+/* ABOUT STYLES */
+/* =========================================== */
+.about {
+  position: relative;
+  width: 80%;
+  max-width: 1440px;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 3em;
+  padding-top: 5rem;
+}
+
+.about>.about-title {
+  font-family: 'Roboto Serif';
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 1.2px;
+  color: #FF9900;
+  text-transform: uppercase;
+}
+
+.about>.about-cards {
+  display: flex;
+  justify-content: space-between;
+}
+
+.about>.about-cards>.card {
+  width: 30%;
+  border: 3px solid #DCDCDC;
+  padding: 3.75rem 1.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 2rem;
+  box-shadow: 1rem 1rem 2rem 1px #555;
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+}
+
+.about>.about-cards>.card>.logo-box {
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+}
+
+.about>.about-cards>.card>.card-title {
+  font-family: 'Roboto Serif';
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: #000;
+}
+
+.about>.about-cards>.card>.card-text {
+  font-family: 'Roboto Serif';
+  font-weight: 500;
+  font-size: 1rem;
+  color: #000;
+}
+
+.about>.connector {
+  position: relative;
+}
+
+.about>.first-connector {
+  position: absolute;
+  top: 45%;
+  left: 24%;
+}
+
+.about>.second-connector {
+  position: absolute;
+  top: 45%;
+  right: 24%;
+}
+
+.about>.first-connector>.circle-1 {
+  background-color: #EACB9C;
+}
+
+.about>.first-connector>.circle-2 {
+  background-color: #FF9900;
+}
+
+.about>.first-connector>.line {
+  border-bottom-color: #EACB9C;
+}
+
+.about>.second-connector>.circle-1 {
+  background-color: #FF9900;
+}
+
+.about>.second-connector>.circle-2 {
+  background-color: #F85A47;
+}
+
+.about>.second-connector>.line {
+  border-bottom-color: #F85A47;
+}
+
+.about .circle {
+  height: 1rem;
+  width: 1rem;
+  background-color: #000;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.about .line {
+  position: relative;
+  border-bottom: 3px dashed #000;
+  width: 10vw;
+  display: inline-block;
+  vertical-align: text-top;
+  top: 5px;
+}
+
+.about>.about-cards>.card-1>.logo-box {
+  background-color: #EACB9C;
+  box-shadow: 1rem 1rem 2rem 1px #EACB9C99;
+}
+
+.about>.about-cards>.card-2>.logo-box {
+  background-color: #FF9900;
+  box-shadow: 1rem 1rem 2rem 1px #FF990099;
+}
+
+.about>.about-cards>.card-3>.logo-box {
+  background-color: #F85A47;
+  box-shadow: 1rem 1rem 2rem 1px #F85A4799;
+}
