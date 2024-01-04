@@ -669,3 +669,103 @@ body {
   -o-border-radius: 0.5rem;
   cursor: pointer; 
 }
+
+
+/* OFFERS STYLES */
+/* =========================================== */
+.review {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.review>.review-title {
+  font-family: 'Roboto Serif';
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 1.2px;
+  color: #FF9900;
+  text-transform: uppercase;
+}
+
+.review>.review-card-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review>.review-card-box>.review-card {
+  width: 30%;
+  border: 3px solid #DCDCDC;
+  padding: 2.5rem 1.25rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 1.5rem;
+  box-shadow: 0.5rem 0.5rem 1rem 0 #55555599;
+  border-radius: 1.5rem;
+  -webkit-border-radius: 1.5rem;
+  -moz-border-radius: 1.5rem;
+  -ms-border-radius: 1.5rem;
+  -o-border-radius: 1.5rem;
+}
+
+.review>.review-card-box>.review-card>.review-card-text {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 1rem;
+  color: #000; 
+}
+
+.review>.review-card-box>.review-card>.review-card-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+.review>.review-card-box>.review-card>.review-card-container>.review-card-sub-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.review>.review-card-box>.review-card>.review-card-container>.review-card-sub-container>.review-card-name {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 1rem;
+  color: #000; 
+}
+
+.review>.review-card-box>.review-card>.review-card-container>.review-card-sub-container>.review-card-city {
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #000; 
+}
+
+.review>.review-footer-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review>.review-footer-box>.review-logo-box {
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.review>.review-footer-box>.review-text {
+  width: 30%;
+  font-family: 'Roboto';
+  font-weight: 300;
+  font-size: 0.8rem;
+  color: #000; 
+}
