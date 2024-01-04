@@ -679,7 +679,8 @@ body {
   flex-direction: column;
   justify-content: start;
   align-items: start;
-  gap: 3rem;
+  gap: 4rem;
+  padding-top: 4rem;
   margin-top: 3rem;
 }
 
@@ -768,4 +769,120 @@ body {
   font-weight: 300;
   font-size: 0.8rem;
   color: #000; 
+}
+
+
+/* CONTACT STYLES */
+/* =========================================== */
+.contact {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  gap: 5rem;
+  margin-top: 5rem;
+}
+
+.contact>.contact-title {
+  font-family: 'Roboto Serif';
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: 1.2px;
+  color: #FF9900;
+  text-transform: uppercase; 
+}
+
+.contact>.contact-text {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 1rem;
+  color: #000;  
+}
+
+.contact>.sender {
+  width: 60%;
+  height: 5rem;
+  background-color: #EACB9C;
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  gap: 1rem;
+  margin-bottom: 8rem;
+}
+.contact>.sender>input {
+  width: 70%;
+  height: 3rem;
+  padding: 1rem;
+}
+.contact>.sender>.sender-button {
+  width: 30%;
+  height: 3rem;
+  background: #F85A47;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0.35rem 0.35rem 0.5rem 0 #F85A4799;
+  font-family: 'Roboto';
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: #FFF;
+}
+
+
+/* FOOTER STYLES */
+/* =========================================== */
+.hr {
+  width: 80%;
+  border-bottom: 3px solid #AAA;
+}
+
+.footer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer>.footer-nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer>.footer-nav>.logo {
+  font-family: 'Roboto Serif';
+  font-weight: 800;
+  font-size: 1.75rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.footer>.footer-nav>.footer__menu {
+  width: 60%;
+  display: flex;
+  justify-content: space-between; 
+}
+
+.footer>.footer-nav>.footer__menu>.footer__link {
+  font-family: 'Roboto';
+  font-weight: 800;
+  font-size: 1rem;
+  color: #000;
+  text-decoration: none;
+}
+
+.footer>.copy {
+  font-family: 'Roboto Serif';
+  font-weight: 800;
+  font-size: 1rem;
+  color: #000;
+  margin: 1rem 0;
+  text-decoration: none; 
+}
+
+.footer>.copy>a {
+  text-decoration: none; 
 }
