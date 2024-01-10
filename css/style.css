@@ -677,6 +677,76 @@ body {
 }
 
 /* ================================================== */
+/* CONTACT STYLES */
+.contact {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.contact > .contact__title {
+  color: var(--vivid-gamboge);
+  font-family: "Roboto Serif", sans-serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.contact > .contact__text {
+  color: var(--black);
+  font-family: "Roboto", serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.75rem;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.contact > .contact__form {
+  display: flex;
+  width: 65%;
+  background: var(--chamois);
+  padding: 2rem;
+  margin: 0 auto;
+  box-shadow: 1rem 1rem 3rem 0rem var(--chamois-light);
+  margin-bottom: 4.25rem;
+}
+
+.contact > .contact__form > input[type="text"] {
+  width: 70%;
+  height: 4rem;
+  padding: 0 2rem;
+  margin-right: 2rem;
+  color: var(--light-grey);
+  font-family: "Roboto", serif;
+  font-size: 1.2rem;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.contact > .contact__form > input[type="button"] {
+  background: var(--tomato);
+  display: flex;
+  width: 25%;
+  height: 4rem;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-family: "Roboto", serif;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.75rem;
+}
+
+/* ================================================== */
 /* MEDIA QUERYS */
 @media (max-width: 600px) {
   .container {
