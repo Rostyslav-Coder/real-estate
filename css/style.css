@@ -294,7 +294,7 @@ body {
   background: var(--white);
 }
 
-.about__title {
+.about > .about__title {
   color: var(--vivid-gamboge);
   font-family: "Roboto Serif", sans-serif;
   font-size: 2.5rem;
@@ -596,18 +596,101 @@ body {
 }
 
 /* ================================================== */
+/* REVIEW STYLES */
+.reviews {
+  width: 80%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 4rem 0;
+  background: var(--white);
+}
+
+.reviews > .review__title {
+  color: var(--vivid-gamboge);
+  font-family: "Roboto Serif", sans-serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.reviews > .container > .review__card {
+  width: 30%;
+  padding: 3rem 2rem;
+  border: 3px solid var(--silver);
+  border-radius: 1.5rem;
+  background: var(--white);
+  box-shadow: 1.5rem 1.5rem 3rem 0rem var(--shadow);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  gap: 2rem;
+}
+
+.reviews > .container > .review__card > .review__stars {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.reviews > .container > .review__card > .review__text {
+  color: var(--black);
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 2rem;
+}
+
+.reviews > .container > .review__card > .review__hero {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reviews > .container > .review__card > .review__hero > img {
+  width: 3.125rem;
+  height: 3.125rem;
+  border-radius: 3.125rem;
+}
+
+.reviews > .container > .review__card > .review__hero > .hero__name {
+  color: var(--black);
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.reviews > .container > .review__card > .review__hero > .hero__address {
+  color: var(--shadow);
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* ================================================== */
 /* MEDIA QUERYS */
 @media (max-width: 600px) {
-  :root {
-    font-size: 8px;
-  }
   .container {
     flex-direction: column;
+    gap: 3rem;
   }
   .about > .container > .about__card,
-  .offers > .container > .offer__card {
+  .offers > .container > .offer__card,
+  .deals > .container > .deals__image-side,
+  .deals > .container > .deals__text-side,
+  .reviews > .container > .review__card {
     width: 80%;
     margin: 0 auto;
+    min-height: 35vh;
   }
   .about > .container > .conector {
     display: none;
