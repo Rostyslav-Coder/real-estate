@@ -744,6 +744,71 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: 1.75rem;
+  cursor: pointer;
+}
+
+.footer {
+  width: 100%;
+  height: 8rem;
+  overflow: hidden;
+  border-top: 3px solid var(--light-grey);
+  background: var(--chamois);
+}
+
+/* ================================================== */
+/* FOOTER STYLES */
+.footer > .container {
+  width: 80%;
+  max-width: 1440px;
+  margin: 2rem auto 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer > .container > .footer__logo {
+  color: var(--black);
+  font-family: "Roboto Serif", sans-serif;
+  font-size: 1.625rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: uppercase;
+  cursor: default;
+}
+
+.footer > .container > .footer__btns {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer > .container > .footer__btns > .footer__btn {
+  color: var(--black);
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+}
+
+.footer > .copy {
+  color: var(--black);
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-align: center;
+}
+
+.footer > .copy > a {
+  color: var(--tomato);
+  font-family: "Roboto", serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  text-decoration: none;
 }
 
 /* ================================================== */
