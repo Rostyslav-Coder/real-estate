@@ -509,7 +509,7 @@ body {
   grid-column: 2/5;
   grid-row: 2/6;
   border-radius: 0.625rem;
-  /* background: var(--light-grey); */
+  background: var(--light-grey);
   box-shadow: 1.5rem 1.5rem 3rem 0rem var(--shadow);
 }
 
@@ -517,7 +517,7 @@ body {
   grid-column: 4/8;
   grid-row: 4/7;
   border-radius: 0.625rem;
-  /* background: var(--light-grey); */
+  background: var(--light-grey);
   box-shadow: 1.5rem 1.5rem 3rem 0rem var(--shadow);
 }
 
@@ -535,7 +535,7 @@ body {
 }
 
 .deals > .container > .deals__text-side > .dials__subtitle {
-  color: #000;
+  color: var(--black);
   font-family: "Roboto Serif" serif;
   font-size: 1.25rem;
   font-style: normal;
@@ -545,7 +545,7 @@ body {
 }
 
 .deals > .container > .deals__text-side > .deals__text {
-  color: #000;
+  color: var(--black);
   font-family: "Roboto", serif;
   font-size: 1rem;
   font-style: normal;
@@ -563,8 +563,8 @@ body {
 }
 
 .deals > .container > .deals__text-side > .deals__grid > .info > h4 {
-  color: #000;
-  font-family: Roboto;
+  color: var(--black);
+  font-family: "Roboto", serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 700;
@@ -572,8 +572,8 @@ body {
 }
 
 .deals > .container > .deals__text-side > .deals__grid > .info > p {
-  color: #545a58;
-  font-family: Roboto;
+  color: var(--black);
+  font-family: "Roboto", serif;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
