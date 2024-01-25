@@ -1,0 +1,53 @@
+@import url(https://fonts.googleapis.com/css?family=Orbitron:900);
+@import url(https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic);
+
+:root {
+  --blue: #00DCFC;
+  --dark: #222;
+  --shadow: #22222299;
+  --violet: #9400D3;
+  --white: #FFF;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header {
+  width: 100%;
+  height: 3rem;
+  background: var(--shadow, #22222299);
+  backdrop-filter: blur(4px);
+}
+
+.header__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  /* justify-content: space-between; */
+  align-items: stretch;
+}
+
+.header__logo{
+  display: none;
+}
+
+.header__btns {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__btn {
+  color: var(--white, #FFF);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-decoration: none;
+  text-transform: capitalize;
+}
