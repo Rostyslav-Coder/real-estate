@@ -14,7 +14,7 @@ window.addEventListener('scroll', () => {
 });
 
 window.addEventListener('load', () => {
-  const titles = ['.banner__title', '.about__title'];
+  const titles = ['.banner__title', '.about__title', '.offer__title'];
 
   titles.forEach((selector) => {
     const title = document.querySelector(selector);
@@ -38,28 +38,6 @@ window.addEventListener('load', () => {
     scrollText();
   });
 });
-
-// window.addEventListener('load', () => {
-//   const bannerTitle = document.querySelector('.banner__title');
-//   let text = bannerTitle.textContent;
-//   text = `${text} ${text}`; //
-//   bannerTitle.textContent = text;
-
-//   let scrollPos = 0;
-//   const scrollSpeed = 2; //
-
-//   function scrollText() {
-//     if (scrollPos < bannerTitle.scrollWidth / 2) {
-//       scrollPos += scrollSpeed;
-//     } else {
-//       scrollPos = 0;
-//     }
-//     bannerTitle.scrollLeft = scrollPos;
-//     requestAnimationFrame(scrollText);
-//   }
-
-//   scrollText();
-// });
 
 window.addEventListener('load', () => {
   const partnersIcons = document.querySelector('.partners__icons');
@@ -102,51 +80,103 @@ window.addEventListener('load', () => {
   // Change the image by clicking on the arrow
   arrows.forEach((arrow) => arrow.addEventListener('click', changeImage));
 
-  // Change the image every 3 seconds
-  setInterval(changeImage, 3000);
+  // Change the image every 5 seconds
+  setInterval(changeImage, 5000);
 
   // Let's start with the first image
   changeImage();
 });
 
+document.querySelectorAll('.banner__image>img', '.offer__card>img').addEventListener('touchstart', () => {
+  this.style.filter = 'none';
+});
+
 window.addEventListener('load', () => {
   const about = document.querySelector('.about');
+  const images = ['../img/icons/search-v.svg', '../img/icons/pay-v.svg', '../img/icons/own-v.svg'];
 
-  function createDiv() {
-    const div = document.createElement('div');
-    const size = Math.random() * 50 + 50; // Random size from 50 to 100px
+  function createImg() {
+    const img = document.createElement('img');
+    const size = Math.random() * 50 + 30; // Random size from 50 to 80px
 
-    div.style.transition = '2s';
-    div.style.width = `${size}px`;
-    div.style.height = `${size}px`;
-    div.style.borderRadius = '50%';
-    div.style.boxShadow = `
+    img.style.transition = '2s';
+    img.style.width = `${size}px`;
+    img.style.height = `${size}px`;
+    img.style.padding = '0.5rem';
+    img.style.borderRadius = '50%';
+    img.style.boxShadow = `
       0px 0px 15px 0px var(--white, #FFF),
       0px 0px 30px 0px var(--white, #FFF),
       0px 0px 45px 0px var(--violet, #9400D3),
       0px 0px 60px 0px var(--violet, #9400D3),
       0px 0px 75px 0px var(--blue, #00DFFC)
     `;
-    div.style.position = 'absolute';
-    div.style.top = `${Math.random() * (about.offsetHeight - size * 2)}px`;
-    div.style.left = `${Math.random() * (about.offsetWidth - size * 2)}px`;
-    div.style.transformOrigin = 'center'; // Add transform dot to center
-    div.style.zIndex = 6;
+    img.style.position = 'absolute';
+    img.style.top = `${Math.random() * (about.offsetHeight - size * 2)}px`;
+    img.style.left = `${Math.random() * (about.offsetWidth - size * 2)}px`;
+    img.style.transformOrigin = 'center'; // Add transform dot to center
+    img.style.zIndex = 6;
+    img.src = images[Math.floor(Math.random() * images.length)]; // Random image
 
-    about.appendChild(div);
+    about.appendChild(img);
 
     // Animation size scale
     setTimeout(() => {
-      div.style.transform = 'scale(1.5)';
+      img.style.transform = 'scale(1.5)';
     }, 100);
 
     // Removing element after animation
     const randomTime = (Math.floor(Math.random() * 2) + 4) * 1000;
     setTimeout(() => {
-      about.removeChild(div);
+      about.removeChild(img);
     }, randomTime);
   }
 
-  // Создание div каждые 5 секунд
-  setInterval(createDiv, 5000);
+  // Generate img onse in 5 sec
+  setInterval(createImg, 5000);
+});
+
+window.addEventListener('load', () => {
+  const about = document.querySelector('.offer');
+  const image = '../img/icons/house.svg';
+
+  function createImg() {
+    const img = document.createElement('img');
+    const size = Math.random() * 50 + 30; // Random size from 50 to 80px
+
+    img.style.transition = '2s';
+    img.style.width = `${size}px`;
+    img.style.height = `${size}px`;
+    img.style.padding = '0.5rem';
+    img.style.borderRadius = '50%';
+    img.style.boxShadow = `
+      0px 0px 15px 0px var(--white, #FFF),
+      0px 0px 30px 0px var(--white, #FFF),
+      0px 0px 45px 0px var(--violet, #9400D3),
+      0px 0px 60px 0px var(--violet, #9400D3),
+      0px 0px 75px 0px var(--blue, #00DFFC)
+    `;
+    img.style.position = 'absolute';
+    img.style.top = `${Math.random() * (about.offsetHeight - size * 2)}px`;
+    img.style.left = `${Math.random() * (about.offsetWidth - size * 2)}px`;
+    img.style.transformOrigin = 'center'; // Add transform dot to center
+    img.style.zIndex = '6';
+    img.src = image;
+
+    about.appendChild(img);
+
+    // Animation size scale
+    setTimeout(() => {
+      img.style.transform = 'scale(1.5)';
+    }, 100);
+
+    // Removing element after animation
+    const randomTime = (Math.floor(Math.random() * 2) + 4) * 1000;
+    setTimeout(() => {
+      about.removeChild(img);
+    }, randomTime);
+  }
+
+  // Generate img onse in 5 sec
+  setInterval(createImg, 5000);
 });
