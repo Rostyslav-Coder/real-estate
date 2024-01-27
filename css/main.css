@@ -461,6 +461,7 @@
   width: 100%;
   filter: grayscale(1);
   aspect-ratio: 3/2;
+  transition: 500ms;
 }
 
 .offer__card>.card__button {
@@ -579,10 +580,11 @@
     height: 100%;
     width: auto;
   }
-
 }
 
+/* ============ Laptop Styles ============ */
 @media (min-width: 1024px) {
+  /* ============ Header Styles ============ */
   .header,
   .header__logo {
     height: 4rem;
@@ -593,14 +595,14 @@
   .header__btn:hover {
     transform: scale(1.2);
   }
+  /* ============ Banner Styles ============ */
   .banner {
     padding: 5rem 0 3rem;
   }
   .banner__content {
     gap: 3rem;
   }
-  .banner__title,
-  .about__title {
+  .banner__title {
     font-size: 3rem;
     text-shadow: 
       0px 0px 7.5px var(--white, #FFF),
@@ -657,6 +659,7 @@
   .arrow {
     cursor: pointer;
   }
+  /* ============ About Styles ============ */
   .about {
     padding: 8rem 0 2.5rem;
   }
@@ -664,6 +667,15 @@
     width: 80%;
     margin: 0 auto;
     gap: 3rem;
+  }
+  .about__title {
+    font-size: 3rem;
+    text-shadow: 
+      0px 0px 7.5px var(--white, #FFF),
+      0px 0px 15px var(--white, #FFF),
+      0px 0px 22.5px var(--violet, #9400D3),
+      0px 0px 30px var(--violet, #9400D3),
+      0px 0px 37.5px var(--blue, #00DFFC);
   }
   .about__cards {
     width: 100%;
@@ -698,9 +710,48 @@
   .card__text {
     font-size: 1.5rem;
   }
+  /* ============ Offer Styles ============ */
+  .offer {
+    padding: 8rem 0;
+  }
+  .offer__title {
+    font-size: 3rem;
+  }
+  .offer__text {
+    font-size: 1.5rem;
+  }
+  .offer__buttons {
+    width: 80%;
+  }
+  .offer__button {
+    width: 35%;
+    cursor: pointer;
+  }
+  .offer__cards {
+    width: 90%;
+    margin: 6rem auto 0;
+  }
+  .offer__cards_wrapper {
+    width: 90%;
+    padding: 38px;
+  }
+  .offer__card {
+    box-shadow: 
+    0px 0px 7.5px var(--white, #FFF),
+    0px 0px 15px var(--white, #FFF),
+    0px 0px 22.5px var(--violet, #9400D3),
+    0px 0px 30px var(--violet, #9400D3),
+    0px 0px 37.5px var(--blue, #00DFFC);
+    cursor: pointer;
+  }
+  .offer__card>img:hover {
+    filter: grayscale(0);
+  }
 }
 
+/* ============ Desctop Styles ============ */
 @media (min-width: 1440px) {
+  /* ============ Header Styles ============ */
   .header,
   .header__logo {
     height: 5rem;
@@ -708,6 +759,7 @@
   .header__btn {
     font-size: 1.5rem;
   }
+  /* ============ Banner Styles ============ */
   .banner {
     padding: 8rem 0 5rem;
   }
@@ -734,6 +786,7 @@
   .partners__text {
     margin-bottom: 1rem;
   }
+  /* ============ About Styles ============ */
   .about {
     padding: 8.25rem 0 4rem;
   }
@@ -747,6 +800,16 @@
     font-size: 2.25rem;
   }
   .card__text {
+    font-size: 2rem;
+  }
+  /* ============ Offer Styles ============ */
+  .offer__content {
+    gap: 4rem;
+  }
+  .offer__title {
+    font-size: 4rem;
+  }
+  .offer__text {
     font-size: 2rem;
   }
 }
