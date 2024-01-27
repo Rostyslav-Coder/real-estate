@@ -92,11 +92,13 @@ window.addEventListener('load', () => {
 });
 
 // MOBILE TOUCH ANIMATION
-// eslint-disable-next-line prefer-arrow-callback
+// eslint-disable-next-line prefer-arrow-callback, func-names
 document.querySelectorAll('.mobile__touch').forEach(function (img) {
+  // eslint-disable-next-line func-names
   img.addEventListener('touchstart', function () {
     this.style.filter = 'none';
   });
+  // eslint-disable-next-line func-names
   img.addEventListener('touchend', function () {
     this.style.filter = 'grayscale(1)';
   });
@@ -105,7 +107,7 @@ document.querySelectorAll('.mobile__touch').forEach(function (img) {
 // ABOUT BACKGROUND ANIMATION
 window.addEventListener('load', () => {
   const about = document.querySelector('.about');
-  const images = ['../img/animat/img-1.png', '../img/animat/img-2.png', '../img/animat/img-3.png'];
+  const images = ['img/animat/img-1.png', 'img/animat/img-2.png', 'img/animat/img-3.png'];
 
   function createImg() {
     const img = document.createElement('img');
@@ -151,7 +153,7 @@ window.addEventListener('load', () => {
 // OFFER BACKGROUND ANIMATION
 window.addEventListener('load', () => {
   const about = document.querySelector('.offer');
-  const image = '../img/animat/img-4.png';
+  const image = 'img/animat/img-4.png';
 
   function createImg() {
     const img = document.createElement('img');
