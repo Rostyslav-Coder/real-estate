@@ -92,9 +92,13 @@ window.addEventListener('load', () => {
 });
 
 // MOBILE TOUCH ANIMATION
-document.querySelectorAll('.mobile__touch').forEach(function(img) {
-  img.addEventListener('touchstart', function() {
+// eslint-disable-next-line prefer-arrow-callback
+document.querySelectorAll('.mobile__touch').forEach(function (img) {
+  img.addEventListener('touchstart', function () {
     this.style.filter = 'none';
+  });
+  img.addEventListener('touchend', function () {
+    this.style.filter = 'grayscale(1)';
   });
 });
 
