@@ -107,7 +107,7 @@ document.querySelectorAll('.mobile__touch').forEach(function (img) {
 // ABOUT BACKGROUND ANIMATION
 window.addEventListener('load', () => {
   const about = document.querySelector('.about');
-  const images = ['img/animat/img-1.png', 'img/animat/img-2.png', 'img/animat/img-3.png'];
+  const images = ['img/icons/search-v.svg', 'img/icons/pay-v.svg', 'img/icons/own-v.svg'];
 
   function createImg() {
     const img = document.createElement('img');
@@ -153,7 +153,7 @@ window.addEventListener('load', () => {
 // OFFER BACKGROUND ANIMATION
 window.addEventListener('load', () => {
   const about = document.querySelector('.offer');
-  const image = 'img/animat/img-4.png';
+  const image = 'img/icons/house.svg';
 
   function createImg() {
     const img = document.createElement('img');
