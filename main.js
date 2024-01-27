@@ -1,3 +1,4 @@
+// HEADER ACTIVE BUTTON ANIMATION
 window.addEventListener('scroll', () => {
   const headerBtns = document.querySelectorAll('.header__btn');
   headerBtns.forEach((button) => {
@@ -13,6 +14,7 @@ window.addEventListener('scroll', () => {
   });
 });
 
+// TITLE SCROLLING ANIMATION
 window.addEventListener('load', () => {
   const titles = ['.banner__title', '.about__title', '.offer__title'];
 
@@ -39,6 +41,7 @@ window.addEventListener('load', () => {
   });
 });
 
+// PARTNERS ICONS SCROLLING ANIMATION
 window.addEventListener('load', () => {
   const partnersIcons = document.querySelector('.partners__icons');
   const icons = Array.from(partnersIcons.children);
@@ -60,6 +63,7 @@ window.addEventListener('load', () => {
   scrollIcons();
 });
 
+// BANNER IMAGES SLIDER ANIMATION
 window.addEventListener('load', () => {
   const arrows = document.querySelectorAll('.arrow');
   const bannerImages = Array.from(document.querySelectorAll('.banner__image img'));
@@ -87,19 +91,21 @@ window.addEventListener('load', () => {
   changeImage();
 });
 
-document.querySelectorAll('.banner__image>img', '.offer__card>img').forEach((img) => {
+// MOBILE TOUCH ANIMATION
+document.querySelectorAll('.mobile__touch').forEach((img) => {
   img.addEventListener('touchstart', () => {
     this.style.filter = 'none';
   });
 });
 
+// ABOUT BACKGROUND ANIMATION
 window.addEventListener('load', () => {
   const about = document.querySelector('.about');
-  const images = ['../img/icons/search-v.svg', '../img/icons/pay-v.svg', '../img/icons/own-v.svg'];
+  const images = ['../img/animat/img-1.png', '../img/animat/img-2.png', '../img/animat/img-3.png'];
 
   function createImg() {
     const img = document.createElement('img');
-    const size = Math.random() * 50 + 30; // Random size from 50 to 80px
+    const size = Math.random() * 50 + 50; // Random size from 50 to 100px
 
     img.style.transition = '2s';
     img.style.width = `${size}px`;
@@ -117,7 +123,7 @@ window.addEventListener('load', () => {
     img.style.top = `${Math.random() * (about.offsetHeight - size * 2)}px`;
     img.style.left = `${Math.random() * (about.offsetWidth - size * 2)}px`;
     img.style.transformOrigin = 'center'; // Add transform dot to center
-    img.style.zIndex = 6;
+    img.style.zIndex = '2';
     img.src = images[Math.floor(Math.random() * images.length)]; // Random image
 
     about.appendChild(img);
@@ -138,13 +144,14 @@ window.addEventListener('load', () => {
   setInterval(createImg, 5000);
 });
 
+// OFFER BACKGROUND ANIMATION
 window.addEventListener('load', () => {
   const about = document.querySelector('.offer');
-  const image = '../img/icons/house.svg';
+  const image = '../img/animat/img-4.png';
 
   function createImg() {
     const img = document.createElement('img');
-    const size = Math.random() * 50 + 30; // Random size from 50 to 80px
+    const size = Math.random() * 50 + 50; // Random size from 50 to 100px
 
     img.style.transition = '2s';
     img.style.width = `${size}px`;
@@ -162,7 +169,7 @@ window.addEventListener('load', () => {
     img.style.top = `${Math.random() * (about.offsetHeight - size * 2)}px`;
     img.style.left = `${Math.random() * (about.offsetWidth - size * 2)}px`;
     img.style.transformOrigin = 'center'; // Add transform dot to center
-    img.style.zIndex = '6';
+    img.style.zIndex = '2';
     img.src = image;
 
     about.appendChild(img);

@@ -329,6 +329,15 @@
   line-height: normal;
 }
 
+.about__title,
+.about__cards,
+.about__card,
+.card__img,
+.card__title,
+.card__text {
+  z-index: 10;
+}
+
 /* ============ Offer Styles ============ */
 .offer {
   position: relative;
