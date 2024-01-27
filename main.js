@@ -92,8 +92,8 @@ window.addEventListener('load', () => {
 });
 
 // MOBILE TOUCH ANIMATION
-document.querySelectorAll('.mobile__touch').forEach((img) => {
-  img.addEventListener('touchstart', () => {
+document.querySelectorAll('.mobile__touch').forEach(function(img) {
+  img.addEventListener('touchstart', function() {
     this.style.filter = 'none';
   });
 });
