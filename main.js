@@ -87,8 +87,10 @@ window.addEventListener('load', () => {
   changeImage();
 });
 
-document.querySelectorAll('.banner__image>img', '.offer__card>img').addEventListener('touchstart', () => {
-  this.style.filter = 'none';
+document.querySelectorAll('.banner__image>img', '.offer__card>img').forEach((img) => {
+  img.addEventListener('touchstart', () => {
+    this.style.filter = 'none';
+  });
 });
 
 window.addEventListener('load', () => {
