@@ -9,7 +9,6 @@
   --violet: #9400D3;
   --white: #FFF;
 }
-
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -27,25 +26,21 @@
   backdrop-filter: blur(4px);
   z-index: 1000;
 }
-
 .header__wrapper {
   width: 100%;
   height: 100%;
   display: flex;
   align-items: stretch;
 }
-
 .header__logo{
   display: none;
 }
-
 .header__btns {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 .header__btn {
   color: var(--white, #FFF);
   font-family: 'Roboto', sans-serif;
@@ -69,7 +64,6 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-
 .banner__wrapper {
   width: 100%;
   height: 100%;
@@ -78,20 +72,17 @@
   justify-content: space-between;
   align-items: stretch;
 }
-
 .banner__content {
   display: flex;
   flex-direction: column;
   gap: 1rem;
   margin-bottom: 1rem;
 }
-
 .banner__logo {
   height: 4rem;
   align-self: flex-end;
   margin-right: 10%;
 }
-
 .banner__title {
   width: 100%;
   color: var(--dark, #222);
@@ -111,7 +102,6 @@
   overflow: hidden;
   z-index: 2;
 }
-
 .banner__text {
   width: 80%;
   margin: 0 auto;
@@ -123,7 +113,6 @@
   font-weight: 400;
   line-height: normal;
 }
-
 .banner__form {
   width: 80%;
   margin: 0 auto;
@@ -135,7 +124,6 @@
     0px 0px 25px 0px var(--blue, #00DFFC);
   display: flex;
 }
-
 .banner__input {
   width: 70%;
   height: 3rem;
@@ -148,7 +136,6 @@
   line-height: normal;
   text-align: center;
 }
-
 .banner__input::placeholder {
   text-align: center;
   color: var(--white, #FFF);
@@ -158,7 +145,6 @@
   font-weight: 400;
   line-height: normal;
 }
-
 .banner__button {
   width: 30%;
   border: none;
@@ -170,13 +156,11 @@
   font-weight: 600;
   line-height: normal;
 }
-
 .banner__partners {
   width: 80%;
   height: 4rem;
   margin: 0 auto;
 }
-
 .partners__text {
   color: var(--white, #FFF);
   font-family: 'Roboto', sans-serif;
@@ -186,7 +170,6 @@
   line-height: normal;
   margin-bottom: 0.7rem;
 }
-
 .partners__icons {
   display: flex;
   justify-content: space-between;
@@ -194,11 +177,9 @@
   overflow: hidden;
   z-index: 3;
 }
-
 .partners__icons>img {
   height: 0.875rem;
 }
-
 .banner__img {
   width: 100%;
   margin: 0 auto;
@@ -206,7 +187,6 @@
   justify-content: space-between;
   align-items: center;
 }
-
 .banner__image {
   width: 80%;
   display: flex;
@@ -219,7 +199,6 @@
     aspect-ratio: 1/1;
   z-index: 4;
 }
-  
 .banner__image>img {
   display: block;
   width: 33.3%;
@@ -235,7 +214,6 @@
   padding: 3.75rem 0;
   background-color: var(--dark, #222);
 }
-
 .about__wrapper {
   width: 100%;
   height: 100%;
@@ -245,7 +223,6 @@
   align-items: stretch;
   gap: 1.2rem;
 }
-
 .about__title {
   width: 100%;
   color: var(--dark, #222);
@@ -265,7 +242,6 @@
   overflow: hidden;
   z-index: 2;
 }
-
 .about__cards {
   width: 80%;
   margin: 0 auto;
@@ -276,7 +252,6 @@
   gap: 2rem;
   z-index: 7;
 }
-
 .about__card {
   width: 100%;
   padding: 1rem;
@@ -293,7 +268,6 @@
     0px 0px 20px 0px var(--violet, #9400D3),
     0px 0px 25px 0px var(--blue, #00DFFC);
 }
-
 .card__img {
   width: 3.75rem;
   height: 3.75rem;
@@ -308,7 +282,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .card__title {
   color: var(--white, #FFF);
   text-align: center;
@@ -318,7 +291,6 @@
   font-weight: 600;
   line-height: normal;
 }
-
 .card__text{
   color: var(--white, #FFF);
   text-align: justify;
@@ -328,7 +300,6 @@
   font-weight: 400;
   line-height: normal;
 }
-
 .about__title,
 .about__cards,
 .about__card,
@@ -345,17 +316,14 @@
   padding: 3.75rem 0;
   background-color: var(--dark, #222);
 }
-
 .offer__wrapper {
   gap: 1.2rem;
 }
-
 .offer__content{
   display: flex;
   flex-direction: column;
   gap: 1rem;
 }
-
 .offer__title {
   width: 100%;
   color: var(--dark, #222);
@@ -375,7 +343,6 @@
   overflow: hidden;
   z-index: 2;
 }
-
 .offer__text {
   width: 80%;
   margin: 0 auto;
@@ -387,7 +354,6 @@
   font-weight: 400;
   line-height: normal;
 }
-
 .offer__buttons {
   display: flex;
   flex-direction: column;
@@ -395,7 +361,6 @@
   align-items: center;
   gap: 1rem;
 }
-
 .offer__button {
   width: 80%;
   height: 4rem;
@@ -418,7 +383,6 @@
   line-height: normal;
   text-transform: uppercase;
 }
-
 .offer__cards {
   width: 100%;
   height: 55vh;
@@ -427,11 +391,9 @@
   align-items: center;
   margin-top: 1.5rem;
 }
-
 .offer__cards>.arrow {
   display: none;
 }
-
 .offer__cards_wrapper {
   width: 100%;
   height: 100%;
@@ -444,7 +406,6 @@
   overflow-x: hidden;
   overflow-y: auto;
 }
-
 .offer__card {
   position: relative;
   width: 100%;
@@ -455,7 +416,6 @@
     0px 0px 20px 0px var(--violet, #9400D3),
     0px 0px 25px 0px var(--blue, #00DFFC);
 }
-
 .offer__card>img {
   display: block;
   width: 100%;
@@ -463,7 +423,6 @@
   aspect-ratio: 3/2;
   transition: 500ms;
 }
-
 .offer__card>.card__button {
   position: absolute;
   top: 1rem;
@@ -482,7 +441,6 @@
   line-height: normal;
   z-index: 11;
 }
-
 .offer__title,
 .offer__text,
 .offer__button,
@@ -491,6 +449,138 @@
 .offer__card,
 .offer__card>img {
   z-index: 10;
+}
+
+/* ============ Deal Styles ============ */
+.deal {
+  width: 100%;
+  padding: 3.75rem 0;
+  background-color: var(--dark, #222);
+  background-image: url(../img/best-deals/deal__bg.jpg);
+  background-size: cover;
+  background-position: center center;
+}
+.deal__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.deal__title {
+  width: 100%;
+  color: var(--dark, #222);
+  text-shadow: 
+    0px 0px 5px var(--white, #FFF),
+    0px 0px 10px var(--white, #FFF),
+    0px 0px 15px var(--violet, #9400D3),
+    0px -0px 20px var(--violet, #9400D3),
+    0px 0px 25px var(--blue, #00DFFC);
+  font-family: 'Orbitron', serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 2;
+}
+.deal__content {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+}
+.deal__sub_title {
+  color: var(--white, #FFF);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.deal__text {
+  color: var(--white, #FFF);
+  text-align: justify;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.deal__info {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  row-gap: 1rem;
+  column-gap: 15%;
+}
+.info__title {
+  color: var(--white, #FFF);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.info__text {
+  color: var(--white, #FFF);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.deal__button {
+  width: 100%;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--white, #FFF);
+  box-shadow:
+    0px 0px 5px 0px var(--white, #FFF),
+    0px 0px 10px 0px var(--white, #FFF),
+    0px 0px 15px 0px var(--violet, #9400D3),
+    0px 0px 20px 0px var(--violet, #9400D3),
+    0px 0px 25px 0px var(--blue, #00DFFC);
+  color: var(--dark, #222);
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.deal__img {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.deal__images {
+  width: 80%;
+  display: flex;
+  box-shadow:
+    0px 0px 5px 0px var(--white, #FFF),
+    0px 0px 10px 0px var(--white, #FFF),
+    0px 0px 15px 0px var(--violet, #9400D3),
+    0px 0px 20px 0px var(--violet, #9400D3),
+    0px 0px 25px 0px var(--blue, #00DFFC);
+    aspect-ratio: 4/5;
+  z-index: 4;
+}
+.deal__images>img {
+  width: 50%;
+  display: block;
+  filter: grayscale(1);
+  transition: 500ms;
+  z-index: 5;
 }
 
 /* ============ Mobile Horizontal Styles ============ */
@@ -580,6 +670,19 @@
     height: 100%;
     width: auto;
   }
+  /* ============ Deal Styles ============ */
+  .deal__wrapper {
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .deal__content {
+    width: 50%;
+    margin-left: 0;
+  }
+  .deal__img {
+    width: 40%;
+  }
 }
 
 /* ============ Laptop Styles ============ */
@@ -591,6 +694,7 @@
   }
   .header__btn {
   font-size: 1.25rem;
+  cursor: pointer;
   }
   .header__btn:hover {
     transform: scale(1.2);
@@ -737,14 +841,58 @@
   }
   .offer__card {
     box-shadow: 
-    0px 0px 7.5px var(--white, #FFF),
-    0px 0px 15px var(--white, #FFF),
-    0px 0px 22.5px var(--violet, #9400D3),
-    0px 0px 30px var(--violet, #9400D3),
-    0px 0px 37.5px var(--blue, #00DFFC);
+      0px 0px 7.5px var(--white, #FFF),
+      0px 0px 15px var(--white, #FFF),
+      0px 0px 22.5px var(--violet, #9400D3),
+      0px 0px 30px var(--violet, #9400D3),
+      0px 0px 37.5px var(--blue, #00DFFC);
     cursor: pointer;
   }
   .offer__card>img:hover {
+    filter: grayscale(0);
+  }
+  /* ============ Deal Styles ============ */
+  .deal {
+    padding: 8rem 0;
+  }
+  .deal__title {
+    font-size: 3rem;
+    margin-bottom: 3.5rem;
+  }
+  .deal__content {
+    gap: 2rem;
+  }
+  .deal__sub_title {
+    font-size: 2rem;
+  }
+  .deal__text {
+    font-size: 1.25rem;
+  }
+  .deal__info {
+    row-gap: 2rem;
+  }
+  .info__title {
+    font-size: 1.25rem;
+  }
+  .deal__button {
+    font-size: 1.25rem;
+    box-shadow: 
+      0px 0px 7.5px var(--white, #FFF),
+      0px 0px 15px var(--white, #FFF),
+      0px 0px 22.5px var(--violet, #9400D3),
+      0px 0px 30px var(--violet, #9400D3),
+      0px 0px 37.5px var(--blue, #00DFFC);
+    cursor: pointer;
+  }
+  .deal__images {
+    box-shadow: 
+      0px 0px 7.5px var(--white, #FFF),
+      0px 0px 15px var(--white, #FFF),
+      0px 0px 22.5px var(--violet, #9400D3),
+      0px 0px 30px var(--violet, #9400D3),
+      0px 0px 37.5px var(--blue, #00DFFC);
+  }
+  .deal__images>img:hover {
     filter: grayscale(0);
   }
 }
@@ -811,5 +959,30 @@
   }
   .offer__text {
     font-size: 2rem;
+  }
+  /* ============ Deal Styles ============ */
+  .deal__title {
+    margin-bottom: 4rem;
+    font-size: 4rem;
+  }
+  .deal__content {
+    gap: 2.25rem;
+  }
+  .deal__sub_title {
+    font-size: 2.5rem;
+  }
+  .deal__text {
+    font-size: 1.5rem;
+  }
+  .info__title {
+    font-size: 1.5rem;
+  }
+  .info__text {
+    font-size: 1.125rem;
+  }
+  .deal__button {
+    margin-top: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
   }
 }

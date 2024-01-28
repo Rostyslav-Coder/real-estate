@@ -16,7 +16,12 @@ window.addEventListener('scroll', () => {
 
 // TITLE SCROLLING ANIMATION
 window.addEventListener('load', () => {
-  const titles = ['.banner__title', '.about__title', '.offer__title'];
+  const titles = [
+    '.banner__title',
+    '.about__title',
+    '.offer__title',
+    '.deal__title',
+  ];
 
   titles.forEach((selector) => {
     const title = document.querySelector(selector);
@@ -67,6 +72,34 @@ window.addEventListener('load', () => {
 window.addEventListener('load', () => {
   const arrows = document.querySelectorAll('.arrow');
   const bannerImages = Array.from(document.querySelectorAll('.banner__image img'));
+  let currentImageIndex = 0;
+
+  function changeImage() {
+    // Reset the width of all images to 0%
+    // eslint-disable-next-line no-return-assign, no-param-reassign
+    bannerImages.forEach((img) => img.style.width = '0%');
+
+    // Set the width of the current image to 100%
+    bannerImages[currentImageIndex].style.width = '100%';
+
+    // Moving on to the next image
+    currentImageIndex = (currentImageIndex + 1) % bannerImages.length;
+  }
+
+  // Change the image by clicking on the arrow
+  arrows.forEach((arrow) => arrow.addEventListener('click', changeImage));
+
+  // Change the image every 5 seconds
+  setInterval(changeImage, 5000);
+
+  // Let's start with the first image
+  changeImage();
+});
+
+// BEST-DEAL IMAGES SLIDER ANIMATION
+window.addEventListener('load', () => {
+  const arrows = document.querySelectorAll('.arrow');
+  const bannerImages = Array.from(document.querySelectorAll('.deal__images img'));
   let currentImageIndex = 0;
 
   function changeImage() {
