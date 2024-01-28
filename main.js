@@ -21,6 +21,7 @@ window.addEventListener('load', () => {
     '.about__title',
     '.offer__title',
     '.deal__title',
+    '.review__title',
   ];
 
   titles.forEach((selector) => {

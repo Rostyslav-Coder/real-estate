@@ -583,6 +583,89 @@
   z-index: 5;
 }
 
+/* ============ Review Styles ============ */
+.review {
+  width: 100%;
+  padding: 3.75rem 0;
+  background-color: var(--dark, #222);
+}
+.review__wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+.review__title {
+  width: 100%;
+  color: var(--dark, #222);
+  text-shadow: 
+    0px 0px 5px var(--white, #FFF),
+    0px 0px 10px var(--white, #FFF),
+    0px 0px 15px var(--violet, #9400D3),
+    0px -0px 20px var(--violet, #9400D3),
+    0px 0px 25px var(--blue, #00DFFC);
+  font-family: 'Orbitron', serif;
+  font-size: 2.5rem;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  z-index: 2;
+}
+.review__cards {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
+.review__card {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  box-shadow:
+    0px 0px 5px 0px var(--white, #FFF),
+    0px 0px 10px 0px var(--white, #FFF),
+    0px 0px 15px 0px var(--violet, #9400D3),
+    0px 0px 20px 0px var(--violet, #9400D3),
+    0px 0px 25px 0px var(--blue, #00DFFC);
+}
+.review__text {
+  color: var(--white, #FFF);
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.review__name {
+  color: var(--white, #FFF);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.review__city {
+  color: var(--white, #FFF);
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
 /* ============ Mobile Horizontal Styles ============ */
 @media (min-width: 600px) {
   /* ============ Header Styles ============ */
@@ -683,6 +766,13 @@
   .deal__img {
     width: 40%;
   }
+  /* ============ Review Styles ============ */
+  .review {
+    padding: 3.75rem 0 1.3rem;
+  }
+  .review__cards {
+    flex-direction: row;
+  }  
 }
 
 /* ============ Laptop Styles ============ */
@@ -895,6 +985,44 @@
   .deal__images>img:hover {
     filter: grayscale(0);
   }
+  /* ============ Review Styles ============ */
+  .review {
+    padding: 8rem 0 4rem;
+  }
+  .review__wrapper {
+    gap: 4rem;
+  }
+  .review__title {
+    font-size: 3rem;
+  }
+  .review__cards {
+    margin-bottom: 10.25rem;
+  }
+  .review__card {
+    padding: 1.5rem;
+    gap: 1.5rem;
+    box-shadow: 
+      0px 0px 7.5px var(--white, #FFF),
+      0px 0px 15px var(--white, #FFF),
+      0px 0px 22.5px var(--violet, #9400D3),
+      0px 0px 30px var(--violet, #9400D3),
+      0px 0px 37.5px var(--blue, #00DFFC);
+  }
+  .stars {
+    height: 2rem;
+  }
+  .stars>img {
+    height: 100%;
+  }
+  .review__text {
+    font-size: 1.25rem;
+  }
+  .review__name {
+    font-size: 2rem;
+  }
+  .review__city {
+    font-size: 1.25rem;
+  }
 }
 
 /* ============ Desctop Styles ============ */
@@ -914,8 +1042,7 @@
   .banner__content {
     gap: 4rem;
   }
-  .banner__title,
-  .about__title {
+  .banner__title {
     font-size: 4rem;
   }
   .banner__text {
@@ -940,6 +1067,9 @@
   }
   .about__wrapper {
     gap: 6rem;
+  }
+  .about__title {
+    font-size: 4rem;
   }
   .about__card {
     padding: 2rem;
@@ -984,5 +1114,27 @@
     margin-top: 4rem;
     height: 4rem;
     font-size: 1.5rem;
+  }
+  /* ============ Review Styles ============ */
+  .review {
+    padding: 8rem 0;
+  }
+  .review__wrapper {
+    gap: 8rem;
+  }
+  .review__title {
+    font-size: 4rem;
+  }
+  .review__cards {
+    margin-bottom: 4.5rem;
+  }
+  .review__text {
+    font-size: 2rem;
+  }
+  .review__name {
+    font-size: 2.25rem;
+  }
+  .review__city {
+   font-size: 1.5rem; 
   }
 }
