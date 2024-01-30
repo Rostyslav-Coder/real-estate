@@ -8,29 +8,111 @@
   --shadow: #22222299;
   --violet: #9400D3;
   --white: #FFF;
-}
+
+  --small-neon:    
+    0px 0px 5px var(--white, #FFF),
+    0px 0px 10px var(--white, #FFF),
+    0px 0px 15px var(--violet, #9400D3),
+    0px 0px 20px var(--violet, #9400D3),
+    0px 0px 25px var(--blue, #00DFFC);
+  --medium-neon:
+    0px 0px 7.5px var(--white, #FFF),
+    0px 0px 15px var(--white, #FFF),
+    0px 0px 22.5px var(--violet, #9400D3),
+    0px 0px 30px var(--violet, #9400D3),
+    0px 0px 37.5px var(--blue, #00DFFC);
+
+  color: var(--white, #FFF);
+  font-family: 'Roboto', sans-serif;
+  font-style: normal;
+  line-height: normal;
+} 
 *, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-
+body {
+  background-color: var(--dark, #222);
+}
 /* ============ Mobile Vertical Styles ============ */
+/* ============ Common Styles ============ */
+.header__wrapper,
+.banner__wrapper,
+.about__wrapper,
+.offer__wrapper,
+.deal__wrapper,
+.review__wrapper,
+.contact__wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+}
+.banner__content,
+.offer__content,
+.deal__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1rem;
+}
+.banner__img,
+.deal__img {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+.banner__title,
+.about__title,
+.offer__title,
+.deal__title,
+.review__title,
+.contact__title {
+  width: 100%;
+  color: var(--dark, #222);
+  text-shadow: var(--small-neon);
+  font-family: 'Orbitron', serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  line-height: 6rem;
+  margin-bottom: 0;
+  z-index: 20;
+}
+.banner__text,
+.partners__text,
+.card__text,
+.offer__text,
+.deal__text,
+.review__text,
+.contact__text,
+.footer__text {
+  text-align: justify;
+  font-weight: 400;
+}
+
 /* ============ Header Styles ============ */
 .header {
   width: 100%;
   height: 3rem;
   position: fixed;
   top: 0;
-  background: var(--shadow, #22222299);
+  background-color: var(--shadow, #22222299);
   backdrop-filter: blur(4px);
   z-index: 1000;
 }
 .header__wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: stretch;
+  flex-direction: row;
 }
 .header__logo{
   display: none;
@@ -43,11 +125,8 @@
 }
 .header__btn {
   color: var(--white, #FFF);
-  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   text-decoration: none;
   text-transform: capitalize;
   transition: 300ms;
@@ -56,27 +135,14 @@
 /* ============ Banner Styles ============ */
 .banner {
   width: 100%;
-  min-height: 100vh;
-  padding: 3.75rem 0 2rem;
-  background-color: var(--dark, #222);
+  padding: 6.4vh 0;
   background-image: url(../img/banner/banner-bg.jpg);
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
 }
 .banner__wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-}
-.banner__content {
-  display: flex;
-  flex-direction: column;
   gap: 1rem;
-  margin-bottom: 1rem;
 }
 .banner__logo {
   height: 4rem;
@@ -84,91 +150,51 @@
   margin-right: 10%;
 }
 .banner__title {
-  width: 100%;
-  color: var(--dark, #222);
-  text-shadow: 
-    0px 0px 5px var(--white, #FFF),
-    0px 0px 10px var(--white, #FFF),
-    0px 0px 15px var(--violet, #9400D3),
-    0px 0px 20px var(--violet, #9400D3),
-    0px 0px 25px var(--blue, #00DFFC);
-  font-family: 'Orbitron', serif;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 5rem;
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  z-index: 2;
+  margin: -1.5rem 0;
 }
 .banner__text {
   width: 80%;
   margin: 0 auto;
-  color: var(--white, #FFF);
-  text-align: justify;
-  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .banner__form {
   width: 80%;
   margin: 0 auto;
-  box-shadow: 
-    0px 0px 5px 0px var(--white, #FFF),
-    0px 0px 10px 0px var(--white, #FFF),
-    0px 0px 15px 0px var(--violet, #9400D3),
-    0px 0px 20px 0px var(--violet, #9400D3),
-    0px 0px 25px 0px var(--blue, #00DFFC);
+  box-shadow: var(--small-neon);
   display: flex;
 }
 .banner__input {
   width: 70%;
   height: 3rem;
+  color: var(--white, #FFF);
   background-color: var(--dark, #222);
   border: none;
-  color: var(--white, #FFF);
-  font-family: 'Roboto' sans-serif;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
   text-align: center;
 }
 .banner__input::placeholder {
-  text-align: center;
   color: var(--white, #FFF);
-  font-family: 'Roboto' sans-serif;
+  height: 3rem;
+  text-align: center;
   font-size: 0.875rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .banner__button {
   width: 30%;
   border: none;
   color: var(--dark, #222);
   text-align: center;
-  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
 }
 .banner__partners {
   width: 80%;
-  height: 4rem;
   margin: 0 auto;
 }
 .partners__text {
-  color: var(--white, #FFF);
-  font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
-  font-style: normal;
   font-weight: 600;
-  line-height: normal;
-  margin-bottom: 0.7rem;
+  margin-bottom: 1.2vh;
 }
 .partners__icons {
   display: flex;
@@ -180,23 +206,11 @@
 .partners__icons>img {
   height: 0.875rem;
 }
-.banner__img {
-  width: 100%;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
 .banner__image {
   width: 80%;
   display: flex;
-  box-shadow:
-    0px 0px 5px 0px var(--white, #FFF),
-    0px 0px 10px 0px var(--white, #FFF),
-    0px 0px 15px 0px var(--violet, #9400D3),
-    0px 0px 20px 0px var(--violet, #9400D3),
-    0px 0px 25px 0px var(--blue, #00DFFC);
-    aspect-ratio: 1/1;
+  box-shadow: var(--small-neon);
+  aspect-ratio: 1/1;
   z-index: 4;
 }
 .banner__image>img {
@@ -212,35 +226,12 @@
   position: relative;
   width: 100%;
   padding: 3.75rem 0;
-  background-color: var(--dark, #222);
 }
 .about__wrapper {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
   gap: 1.2rem;
 }
 .about__title {
-  width: 100%;
-  color: var(--dark, #222);
-  text-shadow: 
-    0px 0px 5px var(--white, #FFF),
-    0px 0px 10px var(--white, #FFF),
-    0px 0px 15px var(--violet, #9400D3),
-    0px 0px 20px var(--violet, #9400D3),
-    0px 0px 25px var(--blue, #00DFFC);
-  font-family: 'Orbitron', serif;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: 5rem;
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  z-index: 2;
+  text-align: center;
 }
 .about__cards {
   width: 80%;
@@ -261,23 +252,13 @@
   gap: 1rem;
   background: var(--shadow, #22222299);
   backdrop-filter: blur(4px);
-  box-shadow:
-    0px 0px 5px 0px var(--white, #FFF),
-    0px 0px 10px 0px var(--white, #FFF),
-    0px 0px 15px 0px var(--violet, #9400D3),
-    0px 0px 20px 0px var(--violet, #9400D3),
-    0px 0px 25px 0px var(--blue, #00DFFC);
+  box-shadow: var(--small-neon);
 }
 .card__img {
   width: 3.75rem;
   height: 3.75rem;
   border-radius: 50%;
-  box-shadow:
-    0px 0px 5px 0px var(--white, #FFF),
-    0px 0px 10px 0px var(--white, #FFF),
-    0px 0px 15px 0px var(--violet, #9400D3),
-    0px 0px 20px 0px var(--violet, #9400D3),
-    0px 0px 25px 0px var(--blue, #00DFFC);
+  box-shadow: var(--small-neon);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -292,15 +273,8 @@
   line-height: normal;
 }
 .card__text{
-  color: var(--white, #FFF);
-  text-align: justify;
-  font-family: 'Roboto', sans-serif;
   font-size: 1.125rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
-.about__title,
 .about__cards,
 .about__card,
 .card__img,
@@ -314,45 +288,14 @@
   position: relative;
   width: 100%;
   padding: 3.75rem 0;
-  background-color: var(--dark, #222);
 }
 .offer__wrapper {
-  gap: 1.2rem;
-}
-.offer__content{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-.offer__title {
-  width: 100%;
-  color: var(--dark, #222);
-  text-shadow: 
-    0px 0px 5px var(--white, #FFF),
-    0px 0px 10px var(--white, #FFF),
-    0px 0px 15px var(--violet, #9400D3),
-    0px -0px 20px var(--violet, #9400D3),
-    0px 0px 25px var(--blue, #00DFFC);
-  font-family: 'Orbitron', serif;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  z-index: 2;
+  gap: 1.5rem;
 }
 .offer__text {
   width: 80%;
   margin: 0 auto;
-  color: var(--white, #FFF);
-  text-align: justify;
-  font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .offer__buttons {
   display: flex;
@@ -369,27 +312,18 @@
   justify-content: center;
   align-items: center;
   background-color: var(--white, #FFF);
-  box-shadow: 
-    0px 0px 5px 0px var(--white, #FFF),
-    0px 0px 10px 0px var(--white, #FFF),
-    0px 0px 15px 0px var(--violet, #9400D3),
-    0px 0px 20px 0px var(--violet, #9400D3),
-    0px 0px 25px 0px var(--blue, #00DFFC);
+  box-shadow: var(--small-neon);
   color: var(--dark, #222);
-  font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
-  font-style: normal;
   font-weight: 800;
-  line-height: normal;
   text-transform: uppercase;
 }
 .offer__cards {
   width: 100%;
-  height: 55vh;
+  height: 52vh;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 1.5rem;
 }
 .offer__cards>.arrow {
   display: none;
@@ -433,15 +367,9 @@
   justify-content: center;
   align-items: center;
   background-color: var(--shadow, #22222299);
-  color: var(--white, #FFF);
-  font-family: 'Roboto', sans-serif;
   font-size: 0.75rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
   z-index: 11;
 }
-.offer__title,
 .offer__text,
 .offer__button,
 .offer__cards,
@@ -455,63 +383,23 @@
 .deal {
   width: 100%;
   padding: 3.75rem 0;
-  background-color: var(--dark, #222);
   background-image: url(../img/best-deals/deal__bg.jpg);
   background-size: cover;
   background-position: center center;
 }
 .deal__wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
   gap: 1rem;
-}
-.deal__title {
-  width: 100%;
-  color: var(--dark, #222);
-  text-shadow: 
-    0px 0px 5px var(--white, #FFF),
-    0px 0px 10px var(--white, #FFF),
-    0px 0px 15px var(--violet, #9400D3),
-    0px -0px 20px var(--violet, #9400D3),
-    0px 0px 25px var(--blue, #00DFFC);
-  font-family: 'Orbitron', serif;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  z-index: 2;
 }
 .deal__content {
   width: 80%;
   margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: stretch;
-  gap: 1rem;
 }
 .deal__sub_title {
-  color: var(--white, #FFF);
-  font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 .deal__text {
-  color: var(--white, #FFF);
-  text-align: justify;
-  font-family: Roboto;
   font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .deal__info {
   display: grid;
@@ -521,20 +409,12 @@
   column-gap: 15%;
 }
 .info__title {
-  color: var(--white, #FFF);
-  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 .info__text {
-  color: var(--white, #FFF);
-  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 .deal__button {
   width: 100%;
@@ -543,36 +423,16 @@
   justify-content: center;
   align-items: center;
   background: var(--white, #FFF);
-  box-shadow:
-    0px 0px 5px 0px var(--white, #FFF),
-    0px 0px 10px 0px var(--white, #FFF),
-    0px 0px 15px 0px var(--violet, #9400D3),
-    0px 0px 20px 0px var(--violet, #9400D3),
-    0px 0px 25px 0px var(--blue, #00DFFC);
+  box-shadow: var(--small-neon);
   color: var(--dark, #222);
-  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
-}
-.deal__img {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
 }
 .deal__images {
   width: 80%;
   display: flex;
-  box-shadow:
-    0px 0px 5px 0px var(--white, #FFF),
-    0px 0px 10px 0px var(--white, #FFF),
-    0px 0px 15px 0px var(--violet, #9400D3),
-    0px 0px 20px 0px var(--violet, #9400D3),
-    0px 0px 25px 0px var(--blue, #00DFFC);
-    aspect-ratio: 4/5;
+  box-shadow: var(--small-neon);
+  aspect-ratio: 4/5;
   z-index: 4;
 }
 .deal__images>img {
@@ -587,41 +447,17 @@
 .review {
   width: 100%;
   padding: 3.75rem 0;
-  background-color: var(--dark, #222);
 }
 .review__wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   gap: 2rem;
-}
-.review__title {
-  width: 100%;
-  color: var(--dark, #222);
-  text-shadow: 
-    0px 0px 5px var(--white, #FFF),
-    0px 0px 10px var(--white, #FFF),
-    0px 0px 15px var(--violet, #9400D3),
-    0px -0px 20px var(--violet, #9400D3),
-    0px 0px 25px var(--blue, #00DFFC);
-  font-family: 'Orbitron', serif;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  z-index: 2;
 }
 .review__cards {
   width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  align-items: stretch;
   gap: 1.5rem;
 }
 .review__card {
@@ -631,45 +467,25 @@
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  box-shadow:
-    0px 0px 5px 0px var(--white, #FFF),
-    0px 0px 10px 0px var(--white, #FFF),
-    0px 0px 15px 0px var(--violet, #9400D3),
-    0px 0px 20px 0px var(--violet, #9400D3),
-    0px 0px 25px 0px var(--blue, #00DFFC);
+  box-shadow: var(--small-neon);
 }
 .review__text {
-  color: var(--white, #FFF);
-  font-family: 'Roboto', sans-serif;
-  text-align: justify;
   font-size: 1rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .review__name {
-  color: var(--white, #FFF);
   text-align: center;
-  font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 .review__city {
-  color: var(--white, #FFF);
   text-align: center;
-  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 /* ============ Contact & Footer Styles ============ */
 .bottom_background {
   width: 100%;
-  background-color: var(--dark, #222);
   background-image: url('../img/bg-images/bottom-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
@@ -682,52 +498,19 @@
   padding: 5rem 0;
 }
 .contact__wrapper {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
 }
-.contact__title {
-  width: 100%;
-  color: var(--dark, #222);
-  text-shadow: 
-    0px 0px 5px var(--white, #FFF),
-    0px 0px 10px var(--white, #FFF),
-    0px 0px 15px var(--violet, #9400D3),
-    0px -0px 20px var(--violet, #9400D3),
-    0px 0px 25px var(--blue, #00DFFC);
-  font-family: 'Orbitron', serif;
-  font-size: 2.5rem;
-  font-style: normal;
-  font-weight: 900;
-  line-height: normal;
-  text-transform: uppercase;
-  white-space: nowrap;
-  overflow: hidden;
-  z-index: 2;
-}
 .contact__text {
   width: 80%;
-  color: var(--white, #FFF);
   text-align: center;
-  font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
 }
 .contact__form {
   width: 80%;
   padding: 2rem;
   background: var(--dark, #222);
-  box-shadow: 
-    0px 0px 5px var(--white, #FFF),
-    0px 0px 10px var(--white, #FFF),
-    0px 0px 15px var(--violet, #9400D3),
-    0px -0px 20px var(--violet, #9400D3),
-    0px 0px 25px var(--blue, #00DFFC);;
+  box-shadow: var(--small-neon);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -737,18 +520,10 @@
 .contact__input {
   width: 100%;
   height: 4rem;
-  box-shadow: 
-    0px 0px 5px var(--white, #FFF),
-    0px 0px 10px var(--white, #FFF),
-    0px 0px 15px var(--violet, #9400D3),
-    0px -0px 20px var(--violet, #9400D3),
-    0px 0px 25px var(--blue, #00DFFC);;
+  box-shadow: var(--small-neon);
   color: var(--shadow, #22222299);
-  font-family: 'Roboto', sans-serif;
   font-size: 1.25rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 .contact__input::placeholder {
   text-align: center;
@@ -757,19 +532,11 @@
   width: 100%;
   height: 4rem;
   background-color: var(--dark, #222);
-  box-shadow: 
-    0px 0px 5px var(--white, #FFF),
-    0px 0px 10px var(--white, #FFF),
-    0px 0px 15px var(--violet, #9400D3),
-    0px -0px 20px var(--violet, #9400D3),
-    0px 0px 25px var(--blue, #00DFFC);
+  box-shadow: var(--small-neon);
   color: var(--white, #FFF);
   text-align: center;
-  font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
 }
 /* ============ Contact Styles ============ */
 .footer {
@@ -780,7 +547,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 .footer__btns {
   width: 80%;
@@ -790,21 +557,12 @@
 .footer__btn {
   text-align: center;
   color: var(--white, #FFF);
-  font-family: 'Roboto', sans-serif;
   font-size: 2rem;
-  font-style: normal;
   font-weight: 700;
-  line-height: normal;
   text-decoration: none;
 }
 .footer__text {
-  color: var(--white, #FFF);
-  text-align: center;
-  font-family: 'Roboto', sans-serif;
   font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.75rem;
 }
 .footer__socials {
   width: 80%;
@@ -813,19 +571,36 @@
   align-items: center;
 }
 .footer__copy {
-  color: var(--white, #FFF);
-  font-family: 'Roboto', sans-serif;
   font-size: 1rem;
-  font-style: normal;
   font-weight: 400;
-  line-height: normal;
 }
 
 /* ============ Mobile Horizontal Styles ============ */
-@media (min-width: 600px) {
+  @media screen and (orientation: landscape) {
+  /* ============ Common Styles ============ */
+  .banner,
+  .about,
+  .offer,
+  .deal,
+  .review,
+  .contact {
+    padding: 3.25rem 0 1rem;
+  }
+  .banner,
+  .deal {
+    min-height: 100vh;
+  }
+  .banner__title,
+  .about__title,
+  .offer__title,
+  .deal__title,
+  .review__title,
+  .contact__title {
+    margin: -1.5rem 0 -1.5rem;
+  }
   /* ============ Header Styles ============ */
   .header__wrapper {
-    width: 80%;
+    width: 90%;
     margin: 0 auto;
   }
   .header__logo{
@@ -837,9 +612,6 @@
     width: 60%;
   }
   /* ============ Banner Styles ============ */
-  .banner {
-    padding: 3.75rem 0 0;
-  }
   .banner__wrapper {
     flex-direction: row;
   }
@@ -857,21 +629,16 @@
     width: 70%;
   }
   /* ============ About Styles ============ */
-  .about__title {
-    width: 50%;
-    margin: 0 auto;
-  }
   .about__cards {
     width: 90%;
     flex-direction: row;
     align-items: stretch;
   }
   /* ============ Offer Styles ============ */
-  .offer {
-    padding: 3.75rem 0 1rem;
+  .offer__wrapper {
+    gap: 1rem;
   }
   .offer__text {
-    width: 90%;
     text-align: center;
   }
   .offer__buttons {
@@ -880,11 +647,11 @@
     flex-direction: row;
   }
   .offer__button {
-    width: 40%;
+    width: 35%;
     margin: 0;
   }
   .offer__cards {
-    height: 40vh;
+    height: 45vh;
   }
   .offer__cards>.arrow {
     display: block;
@@ -915,23 +682,17 @@
     margin: 0 auto;
   }
   .deal__content {
-    width: 50%;
+    width: 60%;
     margin-left: 0;
   }
   .deal__img {
-    width: 40%;
+    width: 35%;
   }
   /* ============ Review Styles ============ */
-  .review {
-    padding: 3.75rem 0 1.3rem;
-  }
   .review__cards {
     flex-direction: row;
   }
   /* ============ Contact Styles ============ */
-  .contact {
-    padding: 3.73rem 0 1rem;
-  }
   .contact__wrapper {
     gap: 1rem;
   }
@@ -941,20 +702,45 @@
   }
   /* ============ Footer Styles ============ */
   .footer {
-    padding: 1rem 0;
-    gap: 1rem;
+    padding: 0.5rem 0;
+    gap:0.75rem;
   }
   .footer__btns {
+    width: 90%;
     grid-template-columns: repeat(6, 1fr);
+  }
+  .footer__socials {
+    width: 90%;
   }
 }
 
 /* ============ Laptop Styles ============ */
-@media (min-width: 1024px) {
+@media screen and (min-width: 1024px) {
+  /* ============ Common Styles ============ */
+  .banner,
+  .about,
+  .offer,
+  .deal,
+  .review {
+    min-height: 100vh;
+    padding: 6rem 0 1rem;
+  }
+  .banner__title,
+  .about__title,
+  .offer__title,
+  .deal__title,
+  .review__title,
+  .contact__title {
+    font-size: 3rem;
+    text-shadow: var(--medium-neon);
+  }
   /* ============ Header Styles ============ */
   .header,
   .header__logo {
     height: 4rem;
+  }
+  .header__wrapper {
+    width: 80%;
   }
   .header__btn {
   font-size: 1.25rem;
@@ -964,62 +750,36 @@
     transform: scale(1.2);
   }
   /* ============ Banner Styles ============ */
-  .banner {
-    padding: 5rem 0 3rem;
-  }
   .banner__content {
-    gap: 3rem;
-  }
-  .banner__title {
-    font-size: 3rem;
-    text-shadow: 
-      0px 0px 7.5px var(--white, #FFF),
-      0px 0px 15px var(--white, #FFF),
-      0px 0px 22.5px var(--violet, #9400D3),
-      0px 0px 30px var(--violet, #9400D3),
-      0px 0px 37.5px var(--blue, #00DFFC);
+    gap: 1.5rem;
   }
   .banner__text {
     margin: 0 0 0 auto;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
   .banner__form{
     margin: 0 0 0 auto;
-    box-shadow: 
-      0px 0px 7.5px var(--white, #FFF),
-      0px 0px 15px var(--white, #FFF),
-      0px 0px 22.5px var(--violet, #9400D3),
-      0px 0px 30px var(--violet, #9400D3),
-      0px 0px 37.5px var(--blue, #00DFFC);
-  }
-  .banner__input,
-  .banner__button {
-    height: 4rem;
+    box-shadow: var(--medium-neon);
   }
   .banner__input::placeholder {
     font-size: 1rem;
   }
   .banner__button {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
     cursor: pointer;
   }
   .banner__partners {
     margin: 0 0 0 auto;
   }
   .partners__text {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .partners__icons>img {
-    height: 1.5rem;
+    height: 1.25rem;
   }
   .banner__image {
     width: 80%;
-    box-shadow: 
-      0px 0px 7.5px var(--white, #FFF),
-      0px 0px 15px var(--white, #FFF),
-      0px 0px 22.5px var(--violet, #9400D3),
-      0px 0px 30px var(--violet, #9400D3),
-      0px 0px 37.5px var(--blue, #00DFFC);
+    box-shadow: var(--medium-neon);
   }
   .banner__image>img:hover {
     filter: grayscale(0);
@@ -1028,62 +788,31 @@
     cursor: pointer;
   }
   /* ============ About Styles ============ */
-  .about {
-    padding: 8rem 0 2.5rem;
-  }
   .about__wrapper {
     width: 80%;
     margin: 0 auto;
-    gap: 3rem;
-  }
-  .about__title {
-    font-size: 3rem;
-    text-shadow: 
-      0px 0px 7.5px var(--white, #FFF),
-      0px 0px 15px var(--white, #FFF),
-      0px 0px 22.5px var(--violet, #9400D3),
-      0px 0px 30px var(--violet, #9400D3),
-      0px 0px 37.5px var(--blue, #00DFFC);
   }
   .about__cards {
     width: 100%;
   }
   .about__card {
     padding: 1.5rem 1rem;
-    gap: 1.5rem;
-    box-shadow: 
-      0px 0px 7.5px var(--white, #FFF),
-      0px 0px 15px var(--white, #FFF),
-      0px 0px 22.5px var(--violet, #9400D3),
-      0px 0px 30px var(--violet, #9400D3),
-      0px 0px 37.5px var(--blue, #00DFFC);
+    box-shadow: var(--medium-neon);
   }
   .card__img {
-    width: 6rem;
-    height: 6rem;
-    box-shadow: 
-    0px 0px 7.5px var(--white, #FFF),
-    0px 0px 15px var(--white, #FFF),
-    0px 0px 22.5px var(--violet, #9400D3),
-    0px 0px 30px var(--violet, #9400D3),
-    0px 0px 37.5px var(--blue, #00DFFC);
+    width: 5rem;
+    height: 5rem;
+    box-shadow: var(--medium-neon);
   }
   .card__img>img {
-    width: 3rem;
-    height: 3rem;
+    width: 50%;
   }
   .card__title {
-    font-size: 2rem;
-  }
-  .card__text {
     font-size: 1.5rem;
   }
   /* ============ Offer Styles ============ */
-  .offer {
-    padding: 8rem 0;
-  }
-  .offer__title {
-    font-size: 3rem;
+  .offer__content {
+    gap: 1.5rem;
   }
   .offer__text {
     font-size: 1.5rem;
@@ -1093,94 +822,64 @@
   }
   .offer__button {
     width: 35%;
+    font-size: 1.5rem;
     cursor: pointer;
   }
   .offer__cards {
     width: 90%;
-    margin: 6rem auto 0;
+    height: 50vh;
+    margin: 0 auto;
   }
   .offer__cards_wrapper {
     width: 90%;
-    padding: 38px;
+    padding: 2rem;
   }
   .offer__card {
-    box-shadow: 
-      0px 0px 7.5px var(--white, #FFF),
-      0px 0px 15px var(--white, #FFF),
-      0px 0px 22.5px var(--violet, #9400D3),
-      0px 0px 30px var(--violet, #9400D3),
-      0px 0px 37.5px var(--blue, #00DFFC);
+    box-shadow: var(--medium-neon);
     cursor: pointer;
   }
   .offer__card>img:hover {
     filter: grayscale(0);
   }
   /* ============ Deal Styles ============ */
-  .deal {
-    padding: 8rem 0;
-  }
-  .deal__title {
-    font-size: 3rem;
-    margin-bottom: 3.5rem;
-  }
-  .deal__content {
-    gap: 2rem;
+  .deal__wrapper {
+    width: 80%;
+    margin-top: 1.5rem;
   }
   .deal__sub_title {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .deal__text {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
   .deal__info {
-    row-gap: 2rem;
+    row-gap: 1rem;
   }
   .info__title {
     font-size: 1.25rem;
   }
   .deal__button {
     font-size: 1.25rem;
-    box-shadow: 
-      0px 0px 7.5px var(--white, #FFF),
-      0px 0px 15px var(--white, #FFF),
-      0px 0px 22.5px var(--violet, #9400D3),
-      0px 0px 30px var(--violet, #9400D3),
-      0px 0px 37.5px var(--blue, #00DFFC);
+    box-shadow: var(--medium-neon);
     cursor: pointer;
   }
   .deal__images {
-    box-shadow: 
-      0px 0px 7.5px var(--white, #FFF),
-      0px 0px 15px var(--white, #FFF),
-      0px 0px 22.5px var(--violet, #9400D3),
-      0px 0px 30px var(--violet, #9400D3),
-      0px 0px 37.5px var(--blue, #00DFFC);
+    box-shadow: var(--medium-neon);
   }
   .deal__images>img:hover {
     filter: grayscale(0);
   }
   /* ============ Review Styles ============ */
   .review {
-    padding: 8rem 0 4rem;
+    padding: 5rem 0;
   }
   .review__wrapper {
-    gap: 4rem;
-  }
-  .review__title {
-    font-size: 3rem;
-  }
-  .review__cards {
-    margin-bottom: 10.25rem;
+    gap: 3rem;
   }
   .review__card {
-    padding: 1.5rem;
+    padding: 1.5rem 1rem;
     gap: 1.5rem;
-    box-shadow: 
-      0px 0px 7.5px var(--white, #FFF),
-      0px 0px 15px var(--white, #FFF),
-      0px 0px 22.5px var(--violet, #9400D3),
-      0px 0px 30px var(--violet, #9400D3),
-      0px 0px 37.5px var(--blue, #00DFFC);
+    box-shadow: var(--medium-neon);
   }
   .stars {
     height: 2rem;
@@ -1189,18 +888,62 @@
     height: 100%;
   }
   .review__text {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
   }
   .review__name {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .review__city {
-    font-size: 1.25rem;
+    font-size: 1.125rem;
+  }
+  /* ============ Contact Styles ============ */
+  .contact {
+    padding: 5rem 0 2rem;
+  }
+  .contact__wrapper {
+    gap: 1.5rem;
+  }
+  .contact__form,
+  .contact__input,
+  .contact__submit {
+    box-shadow: var(--medium-neon);
+  }
+  /* ============ Footer Styles ============ */
+  .footer__btns,
+  .footer__socials {
+    width: 80%;
   }
 }
 
 /* ============ Desctop Styles ============ */
-@media (min-width: 1440px) {
+@media screen and (min-width: 1440px) {
+  /* ============ Common Styles ============ */
+  .banner,
+  .about,
+  .offer,
+  .deal,
+  .review.about {
+    padding: 10rem 0 4rem;
+  }
+  .header__wrapper,
+  .banner__wrapper,
+  .about__wrapper,
+  .offer__wrapper,
+  .deal__wrapper,
+  .review__wrapper,
+  .contact__wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+  .banner__title,
+  .about__title,
+  .offer__title,
+  .deal__title,
+  .review__title,
+  .contact__title {
+    font-size: 4rem;
+    line-height: 8rem;
+  }
   /* ============ Header Styles ============ */
   .header,
   .header__logo {
@@ -1210,14 +953,8 @@
     font-size: 1.5rem;
   }
   /* ============ Banner Styles ============ */
-  .banner {
-    padding: 8rem 0 5rem;
-  }
   .banner__content {
     gap: 4rem;
-  }
-  .banner__title {
-    font-size: 4rem;
   }
   .banner__text {
     font-size: 1.75rem;
@@ -1236,14 +973,8 @@
     margin-bottom: 1rem;
   }
   /* ============ About Styles ============ */
-  .about {
-    padding: 8.25rem 0 4rem;
-  }
   .about__wrapper {
     gap: 6rem;
-  }
-  .about__title {
-    font-size: 4rem;
   }
   .about__card {
     padding: 2rem;
@@ -1258,16 +989,12 @@
   .offer__content {
     gap: 4rem;
   }
-  .offer__title {
-    font-size: 4rem;
-  }
   .offer__text {
     font-size: 2rem;
   }
   /* ============ Deal Styles ============ */
   .deal__title {
     margin-bottom: 4rem;
-    font-size: 4rem;
   }
   .deal__content {
     gap: 2.25rem;
@@ -1290,14 +1017,8 @@
     font-size: 1.5rem;
   }
   /* ============ Review Styles ============ */
-  .review {
-    padding: 8rem 0;
-  }
   .review__wrapper {
     gap: 8rem;
-  }
-  .review__title {
-    font-size: 4rem;
   }
   .review__cards {
     margin-bottom: 4.5rem;

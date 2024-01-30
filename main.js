@@ -1,15 +1,16 @@
 // HEADER ACTIVE BUTTON ANIMATION
 window.addEventListener('scroll', () => {
   const headerBtns = document.querySelectorAll('.header__btn');
-  headerBtns.forEach((button) => {
+  headerBtns.forEach((btn) => {
+    const button = btn;
     const section = document.querySelector(button.getAttribute('href'));
-    const position = section.getBoundingClientRect();
-    if (position.top <= 0 && position.bottom >= 0) {
-      // eslint-disable-next-line no-param-reassign
-      button.style.borderBottom = '2px solid var(--white, #FFF)';
-    } else {
-      // eslint-disable-next-line no-param-reassign
-      button.style.borderBottom = 'none';
+    if (section) { // Checking if an element exists
+      const position = section.getBoundingClientRect();
+      if (position.top <= 0 && position.bottom >= 0) {
+        button.style.borderBottom = '2px solid var(--white, #FFF)';
+      } else {
+        button.style.borderBottom = 'none';
+      }
     }
   });
 });
@@ -18,7 +19,6 @@ window.addEventListener('scroll', () => {
 window.addEventListener('load', () => {
   const titles = [
     '.banner__title',
-    '.about__title',
     '.offer__title',
     '.deal__title',
     '.review__title',
