@@ -15,14 +15,11 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// TITLE SCROLLING ANIMATION
+// BANNER & BEST DEAL TITLE SCROLLING ANIMATION
 window.addEventListener('load', () => {
   const titles = [
     '.banner__title',
-    '.offer__title',
     '.deal__title',
-    '.review__title',
-    '.contact__title',
   ];
 
   titles.forEach((selector) => {
@@ -45,6 +42,157 @@ window.addEventListener('load', () => {
     }
 
     scrollText();
+  });
+});
+
+// ABOUT TITLE ANIMANION
+window.addEventListener('load', () => {
+  const title = document.querySelector('.about__title');
+  const letters = title.textContent.split('');
+  title.textContent = '';
+
+  letters.forEach((letter) => {
+    const span = document.createElement('span');
+    span.textContent = letter === ' ' ? '\u00A0' : letter;
+    span.style.display = 'inline-block';
+    span.style.opacity = '0';
+    span.style.transform = 'scale(2.4) translate(0, -50px)';
+    title.appendChild(span);
+  });
+
+  window.addEventListener('scroll', () => {
+    const position = title.getBoundingClientRect();
+    const windowHeight = window.innerHeight;
+
+    if (position.top <= windowHeight && position.bottom >= windowHeight * 0.2) {
+      title.querySelectorAll('span').forEach((span, i) => {
+        const animatedLetter = span;
+        setTimeout(() => {
+          animatedLetter.style.transition = '2s';
+          animatedLetter.style.opacity = '1';
+          animatedLetter.style.transform = 'scale(1) translate(0, 0)';
+        }, 100 * i);
+      });
+    } else {
+      title.querySelectorAll('span').forEach((span) => {
+        const animatedLetter = span;
+        animatedLetter.style.opacity = '0';
+        animatedLetter.style.transform = 'scale(2.4) translate(0, -50px)';
+      });
+    }
+  });
+});
+
+// OFFER & REVIEW TITLE ANIMANION
+window.addEventListener('load', () => {
+  const titles = ['.offer__title', '.review__title'];
+
+  titles.forEach((selector) => {
+    const title = document.querySelector(selector);
+    const words = title.textContent.split(' ');
+    title.textContent = '';
+
+    words.forEach((word, i) => {
+      const span = document.createElement('span');
+      span.textContent = `${word}\u00A0`; // Add whitespace after each word
+      span.style.display = 'inline-block';
+      span.style.opacity = '0';
+      span.style.transform = i % 2 === 0 ? 'translateX(calc(-80% - 0.5rem))' : 'translateX(calc(80% + 0.5rem))';
+      title.appendChild(span);
+    });
+
+    window.addEventListener('scroll', () => {
+      const position = title.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (position.top <= windowHeight && position.bottom >= windowHeight * 0.2) {
+        title.querySelectorAll('span').forEach((span, i) => {
+          const animatedLetter = span;
+          setTimeout(() => {
+            animatedLetter.style.transition = '2s';
+            animatedLetter.style.opacity = '1';
+            animatedLetter.style.transform = 'translateX(0)';
+          }, 100 * i);
+        });
+      } else {
+        title.querySelectorAll('span').forEach((span, i) => {
+          const animatedLetter = span;
+          animatedLetter.style.opacity = '0';
+          animatedLetter.style.transform = i % 2 === 0 ? 'translateX(calc(-80% - 0.5rem))' : 'translateX(calc(80% + 0.5rem))';
+        });
+      }
+    });
+  });
+});
+
+// ABOUT & REVIEW CARDS ANIMATION
+window.addEventListener('load', () => {
+  const cardsList = ['.about__card', '.review__card'];
+
+  cardsList.forEach((selector) => {
+    const cards = document.querySelectorAll(selector);
+    cards.forEach((card) => {
+      const animatedCard = card;
+      animatedCard.style.transform = 'translateY(15%) scale(0.6)';
+      animatedCard.style.opacity = '0.2';
+      animatedCard.style.transition = '2s';
+    });
+
+    window.addEventListener('scroll', () => {
+      const position = cards[0].getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (position.top <= windowHeight && position.bottom >= windowHeight * 0.2) {
+        cards.forEach((card) => {
+          const animatedCard = card;
+          setTimeout(() => {
+            animatedCard.style.transform = 'translateY(0) scale(1)';
+            animatedCard.style.opacity = '1';
+          }, 100);
+        });
+      } else {
+        cards.forEach((card) => {
+          const animatedCard = card;
+          animatedCard.style.transform = 'translateY(15%) scale(0.6)';
+          animatedCard.style.opacity = '0.2';
+        });
+      }
+    });
+  });
+});
+
+// CONTACT TITLE ANIMANION
+window.addEventListener('load', () => {
+  const title = document.querySelector('.contact__title');
+  const words = title.textContent.split(' ');
+  title.textContent = '';
+
+  words.forEach((word, i) => {
+    const span = document.createElement('span');
+    span.textContent = `${word}\u00A0`; // Add whitespace after each word
+    span.style.display = 'inline-block';
+    span.style.opacity = '0';
+    span.style.transform = 'scale(2.4)';
+    span.style.filter = 'blur(12px)';
+    title.appendChild(span);
+
+    window.addEventListener('scroll', () => {
+      const position = title.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      if (position.top <= windowHeight && position.bottom >= windowHeight * 0.2) {
+        setTimeout(() => {
+          span.style.transition = '2s';
+          span.style.opacity = '1';
+          span.style.transform = 'scale(1)';
+          span.style.filter = 'blur(0)';
+        }, 100 * i);
+      } else {
+        span.style.opacity = '0';
+        span.style.transform = 'scale(2.4)';
+        span.style.filter = 'blur(12px)';
+      }
+    });
   });
 });
 
@@ -137,96 +285,4 @@ document.querySelectorAll('.mobile__touch').forEach(function (img) {
   img.addEventListener('touchend', function () {
     this.style.filter = 'grayscale(1)';
   });
-});
-
-// ABOUT BACKGROUND ANIMATION
-window.addEventListener('load', () => {
-  const about = document.querySelector('.about');
-  const images = ['img/icons/search-v.svg', 'img/icons/pay-v.svg', 'img/icons/own-v.svg'];
-
-  function createImg() {
-    const img = document.createElement('img');
-    const size = Math.random() * 50 + 50; // Random size from 50 to 100px
-
-    img.style.transition = '2s';
-    img.style.width = `${size}px`;
-    img.style.height = `${size}px`;
-    img.style.padding = '0.5rem';
-    img.style.borderRadius = '50%';
-    img.style.boxShadow = `
-      0px 0px 15px 0px var(--white, #FFF),
-      0px 0px 30px 0px var(--white, #FFF),
-      0px 0px 45px 0px var(--violet, #9400D3),
-      0px 0px 60px 0px var(--violet, #9400D3),
-      0px 0px 75px 0px var(--blue, #00DFFC)
-    `;
-    img.style.position = 'absolute';
-    img.style.top = `${Math.random() * (about.offsetHeight - size * 2)}px`;
-    img.style.left = `${Math.random() * (about.offsetWidth - size * 2)}px`;
-    img.style.transformOrigin = 'center'; // Add transform dot to center
-    img.style.zIndex = '2';
-    img.src = images[Math.floor(Math.random() * images.length)]; // Random image
-
-    about.appendChild(img);
-
-    // Animation size scale
-    setTimeout(() => {
-      img.style.transform = 'scale(1.5)';
-    }, 100);
-
-    // Removing element after animation
-    const randomTime = (Math.floor(Math.random() * 2) + 4) * 1000;
-    setTimeout(() => {
-      about.removeChild(img);
-    }, randomTime);
-  }
-
-  // Generate img onse in 5 sec
-  setInterval(createImg, 5000);
-});
-
-// OFFER BACKGROUND ANIMATION
-window.addEventListener('load', () => {
-  const about = document.querySelector('.offer');
-  const image = 'img/icons/house.svg';
-
-  function createImg() {
-    const img = document.createElement('img');
-    const size = Math.random() * 50 + 50; // Random size from 50 to 100px
-
-    img.style.transition = '2s';
-    img.style.width = `${size}px`;
-    img.style.height = `${size}px`;
-    img.style.padding = '0.5rem';
-    img.style.borderRadius = '50%';
-    img.style.boxShadow = `
-      0px 0px 15px 0px var(--white, #FFF),
-      0px 0px 30px 0px var(--white, #FFF),
-      0px 0px 45px 0px var(--violet, #9400D3),
-      0px 0px 60px 0px var(--violet, #9400D3),
-      0px 0px 75px 0px var(--blue, #00DFFC)
-    `;
-    img.style.position = 'absolute';
-    img.style.top = `${Math.random() * (about.offsetHeight - size * 2)}px`;
-    img.style.left = `${Math.random() * (about.offsetWidth - size * 2)}px`;
-    img.style.transformOrigin = 'center'; // Add transform dot to center
-    img.style.zIndex = '2';
-    img.src = image;
-
-    about.appendChild(img);
-
-    // Animation size scale
-    setTimeout(() => {
-      img.style.transform = 'scale(1.5)';
-    }, 100);
-
-    // Removing element after animation
-    const randomTime = (Math.floor(Math.random() * 2) + 4) * 1000;
-    setTimeout(() => {
-      about.removeChild(img);
-    }, randomTime);
-  }
-
-  // Generate img onse in 5 sec
-  setInterval(createImg, 5000);
 });

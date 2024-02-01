@@ -83,11 +83,22 @@ body {
   font-size: 2.5rem;
   font-weight: 900;
   text-transform: uppercase;
-  white-space: nowrap;
   overflow: hidden;
   line-height: 6rem;
   margin-bottom: 0;
   z-index: 20;
+}
+.banner__title,
+.deal__title,
+.review__title {
+  white-space: nowrap;
+}
+.offer__title,
+.contact__title,
+.review__title {
+  white-space: normal;
+  text-align: center;
+  line-height: 3.5rem
 }
 .banner__text,
 .partners__text,
@@ -275,13 +286,6 @@ body {
 .card__text{
   font-size: 1.125rem;
 }
-.about__cards,
-.about__card,
-.card__img,
-.card__title,
-.card__text {
-  z-index: 10;
-}
 
 /* ============ Offer Styles ============ */
 .offer {
@@ -291,6 +295,10 @@ body {
 }
 .offer__wrapper {
   gap: 1.5rem;
+}
+.offer__title {
+  width: 80%;
+  align-self: center;
 }
 .offer__text {
   width: 80%;
@@ -369,14 +377,6 @@ body {
   background-color: var(--shadow, #22222299);
   font-size: 0.75rem;
   z-index: 11;
-}
-.offer__text,
-.offer__button,
-.offer__cards,
-.card__grp,
-.offer__card,
-.offer__card>img {
-  z-index: 10;
 }
 
 /* ============ Deal Styles ============ */
