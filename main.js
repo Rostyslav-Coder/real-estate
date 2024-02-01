@@ -133,8 +133,8 @@ window.addEventListener('load', () => {
     const cards = document.querySelectorAll(selector);
     cards.forEach((card) => {
       const animatedCard = card;
-      animatedCard.style.transform = 'translateY(200px) scale(0.6)';
-      animatedCard.style.opacity = '0.2';
+      animatedCard.style.transform = 'translateY(100px) scale(0.5)';
+      animatedCard.style.opacity = '0';
       animatedCard.style.transition = '2s';
     });
 
@@ -144,14 +144,14 @@ window.addEventListener('load', () => {
       cards.forEach((card) => {
         const position = card.getBoundingClientRect();
 
-        if (position.top <= windowHeight && position.bottom >= windowHeight * 0.1) {
+        if (position.top * 0.8 <= windowHeight && position.bottom >= windowHeight * 0.1) {
           const animatedCard = card;
           animatedCard.style.transform = 'translateY(0) scale(1)';
           animatedCard.style.opacity = '1';
-        } else if (position.top > windowHeight || position.bottom < windowHeight * 0.1) {
+        } else {
           const animatedCard = card;
-          animatedCard.style.transform = 'translateY(200px) scale(0.6)';
-          animatedCard.style.opacity = '0.2';
+          animatedCard.style.transform = 'translateY(100px) scale(0.5)';
+          animatedCard.style.opacity = '0';
         }
       });
     });
